@@ -1,0 +1,32 @@
+input[type=text]{
+    width:10%;
+    box-sizing:border-box;
+    border:3px solid gray;
+    font-family:italic;
+    background-color:white;
+    background-image:url("/static/img/robotDetector/game.png");
+    background-repeat:no-repeat;
+    padding: 11px 0px 0px 25px;
+    transition: width 0.4s ease-in-out;
+    }
+input[type=text]:focus{
+    width:50%;
+}
+button{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px 4px;
+    cursor: pointer;
+    transition:.5s;
+}
+.kill{
+    opacity:.5;
+    cursor:not-allowed;
+}
+.submitForm{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

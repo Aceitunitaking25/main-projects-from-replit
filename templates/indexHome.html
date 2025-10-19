@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Eder projects</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/home/styles.css') }}">
+        <link rel="icon" href="/static/img/home/aceitunita.png">
+    </head>
+    <body>
+        <img src="/static/img/home/Ederprojects.png" class="headerImage">
+        <div class="projects blog">
+    <button onclick="window.location.href='/blog'" class="buttonPage">
+    <span class="button-icon">📝</span> Blog
+    </button>
+    <p class="project-description">Blog de sucesos q suceden</p>
+    </div>
+        <div class="projects">
+    <button onclick="window.location.href='/presentationCard'" class="buttonPage">
+    <span class="button-icon">👤</span> Presentation Card
+    </button>
+    <p class="project-description">Mi tarjeta de presentación digital</p>
+    </div>
+        <div class="projects">
+    <button onclick="window.location.href='/robotDetector'" class="buttonPage">
+    <span class="button-icon">🤖</span> Robot Detector
+    </button>
+    <p class="project-description">¿Eres un robot? ¡Vamos a descubrirlo!</p>
+    </div>
+    <script>
+            function getRandomColor() {
+            const colors = ['#FFD1DC', '#FFECF1', '#FFF4F6', '#FFDFD3', '#FFE4E1',
+    '#F5E6E8', '#FFE5B4', '#FFEEAD', '#FFF8E7', '#FFFACD',
+    '#F0FFF0', '#E8F8F5', '#E0FFFF', '#E6F9FF', '#F0F8FF',
+    '#E6E6FA', '#F5F5FF', '#F8F8FF', '#EDEDFF', '#EAEAFA',
+    '#F5EDF5', '#FAF0FA', '#FFF0FF', '#FFF5EE', '#FFFAF0',
+    '#FAFAD2', '#FFFFE0', '#FFFDD0', '#F5F5DC', '#E9F7EF',
+    '#D5F5E3', '#C8F8E6', '#B2F7E8', '#A3E4D7', '#98FB98',
+    '#C1F9C1', '#E8F8D6', '#F0F0D6', '#F5F5E6', '#FFF8DC',
+    '#FFEBCD', '#FFE4C4', '#FFDEAD', '#FFDAB9', '#FFCCCC',
+    '#FFC0CB', '#FFB6C1', '#F8C3D0', '#F3D1DC', '#EED5D2'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        document.querySelectorAll('.projects').forEach(project => {
+            project.addEventListener('click', (event) => {
+                if (!event.target.closest('button')) {
+                    project.style.backgroundColor = getRandomColor();
+                }
+            });
+        });
+        </script>
+    </body>
+</html>

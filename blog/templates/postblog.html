@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Post en Blog de Eder</title>
+    <link href="{{ url_for('static', filename='/css/blog/styles.css') }}" rel="stylesheet">
+    </head>
+<body>
+    <form method="post" action="/postBlog">
+    <p>Title: <input type="text" name="title" required></p>
+    <p>Date: <input type="date" name="date" required></p>
+    <p>Body Text <input type="text" name="bodyText" required></p>
+    <button type="submit">Save</button> <button type="button" onclick="location.href='/logout'" >Log out</button>
+    </form>
+{{ blogs|safe }}
+</body>
+</html>
